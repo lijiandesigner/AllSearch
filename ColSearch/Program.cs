@@ -55,8 +55,15 @@ namespace ColSearch
                 Query query = new TermQuery(t);//构建一个查询为Term
                 TopDocs docs = searcher.Search(query, null, 1000);//执行查询
                 Console.WriteLine("符合条件的查询结果有:{0}", docs.TotalHits);//查询命中总数
+<<<<<<< HEAD
                 for (int i = 0; i < docs.TotalHits; i++)
                 {
+=======
+                //循环可以被linq替代
+                for (int i = 0; i < docs.TotalHits; i++)
+                {
+                    
+>>>>>>> parent of fb3b311... 6
                     Document doc = searcher.Doc(docs.ScoreDocs[i].Doc);//获取文档对象
                     Console.WriteLine(doc.Get("Sentence"));//读取文档对象中的内容字段
                 }
