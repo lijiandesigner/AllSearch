@@ -48,7 +48,7 @@ namespace ColSearch
                 writer.Optimize();
             }
 
-            //查找
+            //查找 这是一条测试的提交数据注释
             using (IndexSearcher searcher = new IndexSearcher(directory))
             {
                 Term t = new Term("Sentence", "飞");//Sentence索引名称 飞 查询关键字
